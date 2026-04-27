@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ffc0cb;   
+  --secondary: #fff9c4; 
+  --neutral: #f8fafc;   
+  --text: #444;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+
+header {
+  background: var(--primary);
+  padding: 16px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: white;
+}
+
+
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+
+section {
+  background: var(--neutral);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+
+.tentang-container {
+  display: block;
+}
+
+#tentang img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.tentang-teks p {
+  margin-bottom: 16px;
+}
+
+
+#proyek {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+#proyek article {
+  border: 2px solid var(--primary);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff9eb5;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+
+@media (min-width: 640px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #proyek {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 0;
+  }
+
+  .tentang-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  #tentang img {
+    margin: 0;
+  }
+
+  #proyek {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
